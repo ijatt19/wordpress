@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Pill",
+	"slug": "tag-cloud-2",
+	"blockTypes": [ "core/tag-cloud" ],
+	"styles": {
+		"css": "& a { font-size: unset !important; padding: 1ch 2ch !important; text-decoration: none !important; border: 1px solid var(--wp--preset--color--secondary-200) !important; border-radius: 100px !important; line-height: 1 !important; margin-right: var(--wp--preset--spacing--2) !important; margin-bottom: var(--wp--preset--spacing--8) !important; } & a:hover { border: 1px solid var(--wp--preset--color--secondary-500) !important; }"
+	}
+}

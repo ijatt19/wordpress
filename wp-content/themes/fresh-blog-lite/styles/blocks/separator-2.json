@@ -1,0 +1,24 @@
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Fulldiv",
+	"slug": "separator-2",
+	"blockTypes": [ "core/separator" ],
+	"styles": {
+		"border": {
+			"color": "var(--wp--preset--color--secondary-100)",
+			"style": "solid",
+			"width": "0 0 1px 0"
+		},
+		"color": {
+			"text": "var(--wp--preset--color--primary)"
+		},
+		"spacing": {
+			"margin": {
+				"left": "unset",
+				"right": "unset"
+			}
+		},
+		"css": "& { position: relative; width: 100%; overflow: visible; height: 1px; } &::before { content: ''; position: absolute; top: 0; left: 0; width: 100px; height: 2px; background-color: currentColor; }"
+	}
+}

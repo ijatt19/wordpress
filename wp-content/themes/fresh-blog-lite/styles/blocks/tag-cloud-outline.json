@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Outline",
+	"slug": "outline",
+	"blockTypes": [ "core/tag-cloud" ],
+	"styles": {
+		"css": "& a { border: 1px solid var(--wp--preset--color--secondary-200) !important; line-height: 1 !important; margin-right: var(--wp--preset--spacing--2) !important; margin-bottom: var(--wp--preset--spacing--2) !important; } & a:hover { border: 1px solid var(--wp--preset--color--secondary-500) !important; }"
+	}
+}

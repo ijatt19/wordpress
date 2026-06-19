@@ -1,0 +1,15 @@
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "No Style Border",
+	"slug": "list-2",
+	"blockTypes": [ "core/list" ],
+	"styles": {
+		"css": "& { list-style-type: none; } & > li { padding: var(--wp--preset--spacing--8) 0; border-bottom: 1px solid var(--wp--preset--color--secondary-100); } & > li:last-child { border-bottom: none; }",
+		"spacing": {
+			"padding": {
+				"left": "0"
+			}
+		}
+	}
+}

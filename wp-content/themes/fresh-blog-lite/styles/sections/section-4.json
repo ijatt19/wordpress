@@ -1,0 +1,52 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"slug": "section-4",
+	"title": "Secondary",
+	"blockTypes": [ "core/group" ],
+	"styles": {
+		"blocks": {
+			"core/heading": {
+				"color": {
+					"text": "currentColor"
+				},
+				"elements": {
+					"link": {
+						"color": {
+							"text": "currentColor"
+						}
+					}
+				},
+				"css": "&.is-style-text-kicker::before { background-color: var(--wp--preset--color--primary) !important; } &.is-style-text-kicker-2 { background-color: var(--wp--preset--color--primary) !important; color: var(--wp--preset--color--base) !important; } &.is-style-text-genre { border-color: var(--wp--preset--color--secondary-900) !important; }"
+			}
+		},
+		"color": {
+			"background": "var(--wp--preset--color--secondary)",
+			"text": "var(--wp--preset--color--secondary-50)"
+		},
+		"elements": {
+			"button": {
+				":focus": {
+					"outline": {
+						"color": "var(--wp--preset--color--primary)"
+					}
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--secondary-100)",
+						"text": "var(--wp--preset--color--contrast)"
+					}
+				},
+				"color": {
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--secondary-50)"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Kicker 5",
+	"slug": "text-kicker-5",
+	"blockTypes": [
+		"core/heading",
+		"core/paragraph",
+		"core/accordion-heading",
+		"core/query-title"
+	],
+	"styles": {
+		"spacing": {
+			"padding": {
+				"left": "30px"
+			}
+		},
+		"typography": {
+			"fontSize": "var(--wp--preset--font-size--compact)",
+			"fontWeight": "400",
+			"fontStyle": "normal",
+			"lineHeight": "var(--wp--custom--global--line-height--petite)"
+		},
+		"css": "& { position: relative; width: fit-content; } &::before { content: ''; width: 12px; height: 22px; background-color: var(--wp--preset--color--primary); position: absolute; top: 50%; left: 0; transform: translateY(-50%); clip-path: polygon(83% 0px, 100% 0px, 66.6% 100%, 0% 100%); } &::after { content: ''; width: 12px; height: 22px; background-color: var(--wp--preset--color--primary); position: absolute; top: 50%; left: 12px; transform: translateY(-50%); clip-path: polygon(33.3% 0px, 100% 0px, 17% 100%, 0% 100%); }"
+	}
+}

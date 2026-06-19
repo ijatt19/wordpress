@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Alternate",
+	"slug": "post-template",
+	"blockTypes": [ "core/post-template" ],
+	"styles": {
+		"css": "& > li:nth-child(even) > .wp-block-columns { flex-direction: row-reverse !important; }"
+	}
+}

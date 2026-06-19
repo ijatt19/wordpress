@@ -1,0 +1,88 @@
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Public Sans & Jost",
+	"slug": "typography-preset-3",
+	"settings": {
+		"typography": {
+			"fontFamilies": [
+				{
+					"name": "Public Sans",
+					"slug": "primary",
+					"fontFamily": "\"Public Sans\", sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "Public Sans",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/public-sans/PublicSans-VariableFont.woff2"
+							],
+							"fontDisplay": "swap"
+						},
+						{
+							"fontFamily": "Public Sans",
+							"fontStyle": "italic",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/public-sans/PublicSans-Italic-VariableFont.woff2"
+							],
+							"fontDisplay": "swap"
+						}
+					]
+				},
+				{
+					"name": "Jost",
+					"slug": "secondary",
+					"fontFamily": "\"Jost\", sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "Jost",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/jost/Jost-VariableFont.woff2"
+							],
+							"fontDisplay": "swap"
+						},
+						{
+							"fontFamily": "Jost",
+							"fontStyle": "italic",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/jost/Jost-Italic-VariableFont.woff2"
+							],
+							"fontDisplay": "swap"
+						}
+					]
+				},
+				{
+					"name": "Fira Code",
+					"slug": "code",
+					"fontFamily": "\"Fira Code\", monospace",
+					"fontFace": [
+						{
+							"fontFamily": "Fira Code",
+							"fontStyle": "normal",
+							"fontWeight": "300 700",
+							"src": [
+								"file:./assets/fonts/fira-code/FiraCode-VariableFont.woff2"
+							],
+							"fontDisplay": "swap"
+						}
+					]
+				},
+				{
+					"fontFamily": "-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif",
+					"name": "System Sans-serif",
+					"slug": "system-sans-serif"
+				},
+				{
+					"fontFamily": "Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol",
+					"name": "System Serif",
+					"slug": "system-serif"
+				}
+			]
+		}
+	}
+}

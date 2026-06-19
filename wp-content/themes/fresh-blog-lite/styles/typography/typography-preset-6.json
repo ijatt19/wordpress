@@ -1,0 +1,79 @@
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Outfit & Playfair Display",
+	"slug": "typography-preset-6",
+	"settings": {
+		"typography": {
+			"fontFamilies": [
+				{
+					"name": "Outfit",
+					"slug": "primary",
+					"fontFamily": "\"Outfit\", sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "Outfit",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/outfit/Outfit-VariableFont.woff2"
+							],
+							"fontDisplay": "swap"
+						}
+					]
+				},
+				{
+					"name": "Playfair Display",
+					"slug": "secondary",
+					"fontFamily": "\"Playfair Display\", serif",
+					"fontFace": [
+						{
+							"fontFamily": "Playfair Display",
+							"fontStyle": "normal",
+							"fontWeight": "200 1000",
+							"src": [
+								"file:./assets/fonts/playfair-display/PlayfairDisplay-VariableFont.woff2"
+							],
+							"fontDisplay": "swap"
+						},
+						{
+							"fontFamily": "Playfair Display",
+							"fontStyle": "italic",
+							"fontWeight": "200 1000",
+							"src": [
+								"file:./assets/fonts/playfair-display/PlayfairDisplay-Italic-VariableFont.woff2"
+							],
+							"fontDisplay": "swap"
+						}
+					]
+				},
+				{
+					"name": "Fira Code",
+					"slug": "code",
+					"fontFamily": "\"Fira Code\", monospace",
+					"fontFace": [
+						{
+							"fontFamily": "Fira Code",
+							"fontStyle": "normal",
+							"fontWeight": "300 700",
+							"src": [
+								"file:./assets/fonts/fira-code/FiraCode-VariableFont.woff2"
+							],
+							"fontDisplay": "swap"
+						}
+					]
+				},
+				{
+					"fontFamily": "-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif",
+					"name": "System Sans-serif",
+					"slug": "system-sans-serif"
+				},
+				{
+					"fontFamily": "Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol",
+					"name": "System Serif",
+					"slug": "system-serif"
+				}
+			]
+		}
+	}
+}

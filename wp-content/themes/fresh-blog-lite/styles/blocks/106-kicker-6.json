@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Kicker 6",
+	"slug": "text-kicker-6",
+	"blockTypes": [
+		"core/heading",
+		"core/paragraph",
+		"core/accordion-heading",
+		"core/query-title"
+	],
+	"styles": {
+		"spacing": {
+			"padding": {
+				"left": "15px"
+			}
+		},
+		"typography": {
+			"fontSize": "var(--wp--preset--font-size--compact)",
+			"fontWeight": "400",
+			"fontStyle": "normal",
+			"lineHeight": "var(--wp--custom--global--line-height--petite)"
+		},
+		"css": "& { position: relative; width: fit-content; } &::before { content: ''; width: 5px; height: 100%; background-color: var(--wp--preset--color--primary); position: absolute; top: 0; left: 0; }"
+	}
+}

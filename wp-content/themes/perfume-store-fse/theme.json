@@ -1,0 +1,210 @@
+{
+  "settings": {
+    "color": {
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"gradients": [
+				{
+					"gradient": "linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0))",
+					"name": "Black Fade Up",
+					"slug": "black-fadeup"
+				}
+			],
+			"palette": [
+				{
+					"color": "#1c235a",
+					"name": "Primary",
+					"slug": "primary"
+				},
+				{
+					"color": "#f5f5f7",
+					"name": "Light",
+					"slug": "light"
+				},
+				{
+					"color": "#e1e1e5",
+					"name": "Accent",
+					"slug": "accent"
+				},
+				{
+					"color": "#04050d",
+					"name": "Secondary",
+					"slug": "secondary"
+				},
+				{
+					"color": "#111219",
+					"name": "Secondary 950",
+					"slug": "secondary-950"
+				},
+				{
+					"color": "#1d1d24",
+					"name": "Secondary 900",
+					"slug": "secondary-900"
+				},
+				{
+					"color": "#36373d",
+					"name": "Secondary 800",
+					"slug": "secondary-800"
+				},
+				{
+					"color": "#4f5055",
+					"name": "Secondary 700",
+					"slug": "secondary-700"
+				},
+				{
+					"color": "#68696e",
+					"name": "Secondary 600",
+					"slug": "secondary-600"
+				},
+				{
+					"color": "#818185",
+					"name": "Secondary 500",
+					"slug": "secondary-500"
+				},
+				{
+					"color": "#9b9b9e",
+					"name": "Secondary 400",
+					"slug": "secondary-400"
+				},
+				{
+					"color": "#b3b3b6",
+					"name": "Secondary 300",
+					"slug": "secondary-300"
+				},
+				{
+					"color": "#cdcdcf",
+					"name": "Secondary 200",
+					"slug": "secondary-200"
+				},
+				{
+					"color": "#e5e6e6",
+					"name": "Secondary 100",
+					"slug": "secondary-100"
+				},
+				{
+					"color": "#fcfcfc",
+					"name": "Secondary 50",
+					"slug": "secondary-50"
+				},
+				{
+					"color": "#01031a",
+					"name": "Contrast",
+					"slug": "contrast"
+				},
+				{
+					"color": "#ffffff",
+					"name": "Base",
+					"slug": "base"
+				},
+				{
+					"color": "#fafafa",
+					"name": "Base 50",
+					"slug": "base-50"
+				},
+				{
+					"color": "#f5f5f5",
+					"name": "Base 100",
+					"slug": "base-100"
+				},
+				{
+					"color": "#f0f0f0",
+					"name": "Base 200",
+					"slug": "base-200"
+				},
+				{
+					"color": "#ebebeb",
+					"name": "Base 300",
+					"slug": "base-300"
+				},
+				{
+					"color": "#000000",
+					"name": "Black",
+					"slug": "black"
+				}
+			]
+		},
+    "typography": {
+			"fontFamilies": [
+				{
+					"name": "Jost",
+					"slug": "primary",
+					"fontFamily": "\"Jost\", sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "Jost",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/jost/Jost-VariableFont.woff2"
+							],
+							"fontDisplay": "swap"
+						},
+						{
+							"fontFamily": "Jost",
+							"fontStyle": "italic",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/jost/Jost-Italic-VariableFont.woff2"
+							],
+							"fontDisplay": "swap"
+						}
+					]
+				},
+				{
+					"name": "EB Garamond",
+					"slug": "secondary",
+					"fontFamily": "\"EB Garamond\", serif",
+					"fontFace": [
+						{
+							"fontFamily": "EB Garamond",
+							"fontStyle": "normal",
+							"fontWeight": "400 800",
+							"src": [
+								"file:./assets/fonts/eb-garamond/EBGaramond-VariableFont.woff2"
+							],
+							"fontDisplay": "swap"
+						},
+						{
+							"fontFamily": "EB Garamond",
+							"fontStyle": "italic",
+							"fontWeight": "400 800",
+							"src": [
+								"file:./assets/fonts/eb-garamond/EBGaramond-Italic-VariableFont.woff2"
+							],
+							"fontDisplay": "swap"
+						}
+					]
+				},
+				{
+					"name": "Fira Code",
+					"slug": "code",
+					"fontFamily": "\"Fira Code\", monospace",
+					"fontFace": [
+						{
+							"fontFamily": "Fira Code",
+							"fontStyle": "normal",
+							"fontWeight": "300 700",
+							"src": [
+								"file:./assets/fonts/fira-code/FiraCode-VariableFont.woff2"
+							],
+							"fontDisplay": "swap"
+						}
+					]
+				},
+				{
+					"fontFamily": "-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif",
+					"name": "System Sans-serif",
+					"slug": "system-sans-serif"
+				},
+				{
+					"fontFamily": "Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol",
+					"name": "System Serif",
+					"slug": "system-serif"
+				}
+			]
+		}
+  },
+  "version": 3,
+  "$schema": "https://schemas.wp.org/trunk/theme.json"
+}

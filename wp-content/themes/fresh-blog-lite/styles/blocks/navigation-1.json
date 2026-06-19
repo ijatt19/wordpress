@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Stripe",
+	"slug": "navigation-1",
+	"blockTypes": [ "core/navigation" ],
+	"styles": {
+		"css": "&, & .wp-block-navigation__container { width: 100%; gap: 0; margin: 0; padding: 0; list-style: none; } & .wp-block-navigation-item { display: block; width: 100%; margin: 0; padding: 0; border-bottom: 1px solid var(--wp--preset--color--secondary-100); } & .wp-block-navigation-item:last-child  { border-bottom: none; } & .wp-block-navigation-item .wp-block-navigation-item__content { padding: var(--wp--preset--spacing--12) 0; }"
+	}
+}

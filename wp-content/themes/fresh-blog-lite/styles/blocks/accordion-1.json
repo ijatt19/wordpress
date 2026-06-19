@@ -1,0 +1,45 @@
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Minimal",
+	"slug": "accordion-1",
+	"blockTypes": [ "core/accordion" ],
+	"styles": {
+		"css": "& .wp-block-accordion-item { margin-top: 0; } & > :first-child { border-top: none; }",
+		"spacing": {
+			"blockGap": "0"
+		},
+		"blocks": {
+			"core/accordion-heading": {
+				"css": "&__toggle { padding: var(--wp--preset--spacing--24) 0; } &__toggle:hover { background-color: transparent; } &__toggle:focus { background-color: transparent; }"
+			},
+			"core/accordion-item": {
+				"css": "&.is-open .wp-block-accordion-heading__toggle { background-color: transparent; }",
+				"border": {
+					"radius": "0",
+					"bottom": {
+						"width": "0"
+					},
+					"left": {
+						"width": "0"
+					},
+					"right": {
+						"width": "0"
+					}
+				},
+				"color": {
+					"background": "transparent"
+				}
+			},
+			"core/accordion-panel": {
+				"spacing": {
+					"padding": {
+						"top": "0",
+						"left": "0",
+						"right": "0"
+					}
+				}
+			}
+		}
+	}
+}
