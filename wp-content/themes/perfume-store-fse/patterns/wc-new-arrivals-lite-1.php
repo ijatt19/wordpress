@@ -1,71 +1,96 @@
 <?php
-
 /**
  * Title: WC New Arrivals Lite 1
  * Slug: perfume-store-fse/wc-new-arrivals-lite-1
  * Categories: woo-commerce, fresh-blog-lite-patterns
  */
+
+// Define the 5 branded product IDs
+$branded_ids = array(131, 126, 122, 46, 116);
+$brands = array(
+    131 => 'DIOR',
+    126 => 'YSL',
+    122 => 'HMNS',
+    46  => 'NISHANE',
+    116 => 'LOCAL BEST'
+);
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"WC New Arrivals Lite"},"align":"full","className":"is-style-default","style":{"spacing":{"padding":{"top":"var:preset|spacing|100","bottom":"var:preset|spacing|100"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
-<section class="wp-block-group alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--100);padding-bottom:var(--wp--preset--spacing--100)"><!-- wp:group {"align":"wide","className":"is-style-default","style":{"spacing":{"blockGap":"var:preset|spacing|64"}},"layout":{"type":"default"}} -->
-  <div class="wp-block-group alignwide is-style-default"><!-- wp:group {"layout":{"type":"constrained","wideSize":"768px"}} -->
-    <div class="wp-block-group"><!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
-      <div class="wp-block-group alignwide"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
-        <div class="wp-block-group"><!-- wp:heading {"className":"is-style-text-kicker-2"} -->
-          <h2 class="wp-block-heading is-style-text-kicker-2"><?php esc_html_e('Where Luxury Begins', 'perfume-store-fse'); ?></h2>
-          <!-- /wp:heading -->
-        </div>
-        <!-- /wp:group -->
-
-        <!-- wp:group {"layout":{"type":"default"}} -->
-        <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","className":"is-style-text-title-2"} -->
-          <h2 class="wp-block-heading has-text-align-center is-style-text-title-2"><?php esc_html_e('Latest Arrivals', 'perfume-store-fse'); ?></h2>
-          <!-- /wp:heading -->
-        </div>
-        <!-- /wp:group -->
-      </div>
-      <!-- /wp:group -->
+<!-- wp:group {"tagName":"section","metadata":{"name":"WC New Arrivals Lite"},"align":"full","className":"is-style-default","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<section class="wp-block-group alignfull is-style-default pscf-luxury-products-section" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
+  <div class="pscf-luxury-container">
+    <div class="pscf-luxury-section-header">
+      <span class="pscf-luxury-kicker"><?php esc_html_e('Koleksi Terkurasi', 'perfume-store-fse'); ?></span>
+      <h2 class="pscf-luxury-title"><?php esc_html_e('Signature Branded Collection', 'perfume-store-fse'); ?></h2>
+      <div class="pscf-luxury-header-divider"></div>
     </div>
-    <!-- /wp:group -->
 
-    <!-- wp:group {"layout":{"type":"default"}} -->
-    <div class="wp-block-group"><!-- wp:group {"align":"wide","className":"is-style-default","style":{"spacing":{"margin":{"top":"var:preset|spacing|52"}}},"layout":{"type":"default"}} -->
-      <div class="wp-block-group alignwide is-style-default" style="margin-top:var(--wp--preset--spacing--52)"><!-- wp:woocommerce/product-collection {"queryId":0,"query":{"perPage":4,"pages":0,"offset":0,"postType":"product","order":"desc","orderBy":"date","search":"","exclude":[],"inherit":false,"taxQuery":[],"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","outofstock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"filterable":true,"relatedBy":{"categories":true,"tags":true}},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"dimensions":{"widthType":"fill"},"queryContextIncludes":["collection"],"__privatePreviewState":{"isPreview":false,"previewMessage":"Actual products will vary depending on the page being viewed."}} -->
-        <div class="wp-block-woocommerce-product-collection"><!-- wp:woocommerce/product-template -->
-          <!-- wp:group {"className":"is-style-section-1","style":{"spacing":{"blockGap":"0"},"dimensions":{"minHeight":"100%"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
-          <div class="wp-block-group is-style-section-1" style="min-height:100%"><!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
-            <div class="wp-block-group"><!-- wp:group {"className":"is-style-section-2","style":{"spacing":{"padding":{"top":"var:preset|spacing|16","bottom":"var:preset|spacing|16","left":"var:preset|spacing|16","right":"var:preset|spacing|16"}}},"layout":{"type":"constrained"}} -->
-              <div class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--16);padding-right:var(--wp--preset--spacing--16);padding-bottom:var(--wp--preset--spacing--16);padding-left:var(--wp--preset--spacing--16)"><!-- wp:woocommerce/product-image {"showSaleBadge":false,"isDescendentOfQueryLoop":true,"style":{"dimensions":{"aspectRatio":"3/4"}}} -->
-                <!-- wp:woocommerce/product-sale-badge {"isDescendentOfQueryLoop":true,"align":"right","className":"is-style-woo-product-sale-badge-2"} /-->
-                <!-- /wp:woocommerce/product-image -->
-              </div>
-              <!-- /wp:group -->
-
-              <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|32","bottom":"var:preset|spacing|32","left":"var:preset|spacing|32","right":"var:preset|spacing|32"},"blockGap":"var:preset|spacing|16"}},"layout":{"type":"default"}} -->
-              <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--32);padding-right:var(--wp--preset--spacing--32);padding-bottom:var(--wp--preset--spacing--32);padding-left:var(--wp--preset--spacing--32)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->
-                <div class="wp-block-group"><!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"textColor":"primary","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}}} /-->
-
-                  <!-- wp:post-title {"isLink":true,"className":"is-style-text-label-2","__woocommerceNamespace":"woocommerce/product-collection/product-title"} /-->
+    <div class="pscf-luxury-products-grid">
+      <?php
+      if ( class_exists( 'WooCommerce' ) ) {
+          foreach ( $branded_ids as $product_id ) {
+              $product = wc_get_product( $product_id );
+              if ( ! $product ) {
+                  continue;
+              }
+              
+              $brand_label = isset( $brands[$product_id] ) ? $brands[$product_id] : 'PREMIUM';
+              $product_name = $product->get_name();
+              $product_price_html = $product->get_price_html();
+              
+              // Get product attachment image
+              $product_image = wp_get_attachment_image_src( $product->get_image_id(), 'large' );
+              $image_url = $product_image ? $product_image[0] : wc_placeholder_img_src();
+              
+              $add_to_cart_url = $product->add_to_cart_url();
+              $add_to_cart_text = $product->add_to_cart_text();
+              $product_permalink = get_permalink( $product_id );
+              
+              // Get average rating
+              $rating_html = '';
+              if ( wc_review_ratings_enabled() ) {
+                  $average = $product->get_average_rating();
+                  if ( $average > 0 ) {
+                      $rating_html = '<div class="pscf-luxury-rating" title="' . sprintf( esc_attr__( 'Rated %s out of 5', 'woocommerce' ), $average ) . '">';
+                      $rating_html .= str_repeat( '<span class="star">★</span>', round($average) );
+                      $rating_html .= str_repeat( '<span class="star empty">★</span>', 5 - round($average) );
+                      $rating_html .= '</div>';
+                  } else {
+                      // Default luxury stars for aesthetic alignment
+                      $rating_html = '<div class="pscf-luxury-rating">';
+                      $rating_html .= str_repeat( '<span class="star">★</span>', 5 );
+                      $rating_html .= '</div>';
+                  }
+              }
+              ?>
+              <div class="pscf-luxury-product-card">
+                <div class="pscf-luxury-product-badge"><?php echo esc_html( $brand_label ); ?></div>
+                <div class="pscf-luxury-image-container">
+                  <a href="<?php echo esc_url( $product_permalink ); ?>">
+                    <img src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $product_name ); ?>" loading="lazy" />
+                  </a>
                 </div>
-                <!-- /wp:group -->
+                <div class="pscf-luxury-details">
+                  <?php echo $rating_html; ?>
+                  <h3 class="pscf-luxury-product-title">
+                    <a href="<?php echo esc_url( $product_permalink ); ?>"><?php echo esc_html( $product_name ); ?></a>
+                  </h3>
+                  <div class="pscf-luxury-product-price">
+                    <?php echo $product_price_html; ?>
+                  </div>
+                  <div class="pscf-luxury-button-container">
+                    <a href="<?php echo esc_url( $add_to_cart_url ); ?>" data-quantity="1" class="pscf-luxury-add-to-cart-button" data-product_id="<?php echo esc_attr( $product_id ); ?>" rel="nofollow">
+                      <?php echo esc_html( $add_to_cart_text ); ?>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <!-- /wp:group -->
-            </div>
-            <!-- /wp:group -->
-
-            <!-- wp:group {"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|32","left":"var:preset|spacing|32","right":"var:preset|spacing|32"},"blockGap":"var:preset|spacing|16"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-            <div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--32);padding-bottom:var(--wp--preset--spacing--32);padding-left:var(--wp--preset--spacing--32)"><!-- wp:woocommerce/product-button {"isDescendentOfQueryLoop":true,"className":"is-style-woo-product-button ac-right-sb","fontSize":"minute"} /--></div>
-            <!-- /wp:group -->
-          </div>
-          <!-- /wp:group -->
-          <!-- /wp:woocommerce/product-template -->
-        </div>
-        <!-- /wp:woocommerce/product-collection -->
-      </div>
-      <!-- /wp:group -->
+              <?php
+          }
+      } else {
+          echo '<p style="text-align:center;">WooCommerce is not active.</p>';
+      }
+      ?>
     </div>
-    <!-- /wp:group -->
   </div>
-  <!-- /wp:group -->
 </section>
 <!-- /wp:group -->

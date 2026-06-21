@@ -17,6 +17,8 @@
 
 <!-- wp:woocommerce/store-notices /-->
 
+<?php if ( function_exists( 'pscf_display_free_tester_progress' ) ) { pscf_display_free_tester_progress( 'cart' ); } ?>
+
 <!-- wp:woocommerce/cart {"className":"is-style-woo-cart-2"} -->
 <div class="wp-block-woocommerce-cart alignwide is-loading is-style-woo-cart-2"><!-- wp:woocommerce/filled-cart-block -->
   <div class="wp-block-woocommerce-filled-cart-block"><!-- wp:woocommerce/cart-items-block -->

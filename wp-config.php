@@ -105,9 +105,10 @@ if ( strpos( $_host, 'bellonime.site' ) !== false ) {
         $_SERVER['SERVER_PORT'] = '443';
     }
 } else {
-    // Akses lokal via parfume.local
-    define( 'WP_HOME',    'http://parfume.local' );
-    define( 'WP_SITEURL', 'http://parfume.local' );
+    // Akses lokal
+    $subfolder = ( strpos( $_host, 'localhost' ) !== false || strpos( $_host, '127.0.0.1' ) !== false ) ? '/wordpress' : '';
+    define( 'WP_HOME',    'http://' . $_host . $subfolder );
+    define( 'WP_SITEURL', 'http://' . $_host . $subfolder );
 }
 
 

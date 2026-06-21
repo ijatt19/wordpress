@@ -20,6 +20,12 @@
 
 <!-- wp:woocommerce/store-notices /-->
 
+<?php if ( function_exists( 'pscf_display_free_tester_progress' ) ) { pscf_display_free_tester_progress( 'checkout' ); } ?>
+
+<div class="pscf-checkout-block-wrapper">
+    <?php if ( function_exists( 'pscf_checkout_gift_wrap_fields' ) ) { pscf_checkout_gift_wrap_fields( WC()->checkout() ); } ?>
+</div>
+
 <!-- wp:woocommerce/checkout -->
 <div class="wp-block-woocommerce-checkout alignwide wc-block-checkout is-loading"><!-- wp:woocommerce/checkout-fields-block -->
   <div class="wp-block-woocommerce-checkout-fields-block"><!-- wp:woocommerce/checkout-express-payment-block -->

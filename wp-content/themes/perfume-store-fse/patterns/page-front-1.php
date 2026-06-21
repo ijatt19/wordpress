@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Title: Front Page 1 - ( Perfume Store FSE )
  * Slug: perfume-store-fse/page-front-1
@@ -14,8 +13,5 @@
 
 <!-- wp:pattern {"slug":"perfume-store-fse/hero-lite-1"} /-->
 <!-- wp:pattern {"slug":"perfume-store-fse/wc-new-arrivals-lite-1"} /-->
-<!-- wp:pattern {"slug":"perfume-store-fse/aroma-families-lite-1"} /-->
-<!-- wp:pattern {"slug":"perfume-store-fse/facts-lite-1"} /-->
-<!-- wp:pattern {"slug":"perfume-store-fse/blog-lite-1"} /-->
-<!-- wp:pattern {"slug":"perfume-store-fse/testimonials-lite-1"} /-->
 <!-- wp:pattern {"slug":"perfume-store-fse/support-lite-1"} /-->
+<!-- wp:pattern {"slug":"perfume-store-fse/faq-section"} /-->
