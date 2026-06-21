@@ -35,11 +35,10 @@ function pscf_init_features() {
     add_action( 'wp_enqueue_scripts', 'pscf_enqueue_assets' );
     
     // ----------------------------------------------------
-    // Feature 1: Scent Notes
+    // Custom Product Fields (Tester & Pre-Order)
     // ----------------------------------------------------
-    add_action( 'woocommerce_product_options_general_product_data', 'pscf_add_scent_notes_fields' );
-    add_action( 'woocommerce_process_product_meta', 'pscf_save_scent_notes_fields' );
-    add_action( 'woocommerce_single_product_summary', 'pscf_display_scent_notes', 35 );
+    add_action( 'woocommerce_product_options_general_product_data', 'pscf_add_custom_product_fields' );
+    add_action( 'woocommerce_process_product_meta', 'pscf_save_custom_product_fields' );
     
     // ----------------------------------------------------
     // Feature 2: Gift Wrapping
@@ -128,37 +127,11 @@ function pscf_enqueue_assets() {
 }
 
 /**
- * Add Scent Notes Custom Fields to Product General Settings
+ * Add Custom Fields to Product General Settings
  */
-function pscf_add_scent_notes_fields() {
+function pscf_add_custom_product_fields() {
     echo '<div class="options_group pscf-admin-fields">';
-    echo '<h2>' . esc_html__( 'Scent Profile (Karakter Aroma)', 'perfume-store-custom-features' ) . '</h2>';
     
-    woocommerce_wp_text_input( array(
-        'id'          => '_scent_top_notes',
-        'label'       => esc_html__( 'Top Notes 🌟', 'perfume-store-custom-features' ),
-        'placeholder' => esc_html__( 'Contoh: Bergamot, Lemon, Mandarin Orange', 'perfume-store-custom-features' ),
-        'desc_tip'    => 'true',
-        'description' => esc_html__( 'Aroma pertama yang tercium (biasanya bertahan 15 menit pertama).', 'perfume-store-custom-features' ),
-    ) );
-    
-    woocommerce_wp_text_input( array(
-        'id'          => '_scent_middle_notes',
-        'label'       => esc_html__( 'Middle Notes 🌸', 'perfume-store-custom-features' ),
-        'placeholder' => esc_html__( 'Contoh: Jasmine, Rose, Lavender, Nutmeg', 'perfume-store-custom-features' ),
-        'desc_tip'    => 'true',
-        'description' => esc_html__( 'Inti atau "jantung" dari wangi parfum (bertahan beberapa jam).', 'perfume-store-custom-features' ),
-    ) );
-    
-    woocommerce_wp_text_input( array(
-        'id'          => '_scent_base_notes',
-        'label'       => esc_html__( 'Base Notes 🪵', 'perfume-store-custom-features' ),
-        'placeholder' => esc_html__( 'Contoh: Cedarwood, Amber, Musk, Vanilla', 'perfume-store-custom-features' ),
-        'desc_tip'    => 'true',
-        'description' => esc_html__( 'Aroma dasar yang tertinggal paling lama di kulit/baju.', 'perfume-store-custom-features' ),
-    ) );
-    
-    echo '<hr style="border:none; border-top: 1px solid #eee; margin: 15px 0;">';
     echo '<h2>' . esc_html__( 'Free Tester Eligibility', 'perfume-store-custom-features' ) . '</h2>';
     
     woocommerce_wp_checkbox( array(
@@ -225,81 +198,16 @@ function pscf_add_scent_notes_fields() {
 }
 
 /**
- * Save Scent Notes Custom Fields Value
+ * Save Custom Fields Value
  */
-function pscf_save_scent_notes_fields( $post_id ) {
-    $top = isset( $_POST['_scent_top_notes'] ) ? sanitize_text_field( $_POST['_scent_top_notes'] ) : '';
-    $middle = isset( $_POST['_scent_middle_notes'] ) ? sanitize_text_field( $_POST['_scent_middle_notes'] ) : '';
-    $base = isset( $_POST['_scent_base_notes'] ) ? sanitize_text_field( $_POST['_scent_base_notes'] ) : '';
+function pscf_save_custom_product_fields( $post_id ) {
     $is_tester = isset( $_POST['_pscf_is_tester'] ) ? 'yes' : 'no';
     $is_preorder = isset( $_POST['_pscf_is_preorder'] ) ? 'yes' : 'no';
     $preorder_date = isset( $_POST['_pscf_preorder_date'] ) ? sanitize_text_field( $_POST['_pscf_preorder_date'] ) : '';
 
-    update_post_meta( $post_id, '_scent_top_notes', $top );
-    update_post_meta( $post_id, '_scent_middle_notes', $middle );
-    update_post_meta( $post_id, '_scent_base_notes', $base );
     update_post_meta( $post_id, '_pscf_is_tester', $is_tester );
     update_post_meta( $post_id, '_pscf_is_preorder', $is_preorder );
     update_post_meta( $post_id, '_pscf_preorder_date', $preorder_date );
-}
-
-/**
- * Display Scent Profile on Single Product Page
- */
-function pscf_display_scent_notes() {
-    global $product;
-    if ( ! $product ) {
-        return;
-    }
-    
-    $post_id = $product->get_id();
-    $top = get_post_meta( $post_id, '_scent_top_notes', true );
-    $middle = get_post_meta( $post_id, '_scent_middle_notes', true );
-    $base = get_post_meta( $post_id, '_scent_base_notes', true );
-
-    // If all empty, return
-    if ( empty( $top ) && empty( $middle ) && empty( $base ) ) {
-        return;
-    }
-
-    echo '<div class="pscf-scent-profile">';
-    echo '<h3 class="pscf-section-title">' . esc_html__( 'Scent Profile', 'perfume-store-custom-features' ) . '</h3>';
-    echo '<p class="pscf-section-desc">' . esc_html__( 'Karakteristik wewangian unik yang akan Anda rasakan:', 'perfume-store-custom-features' ) . '</p>';
-    
-    echo '<div class="pscf-notes-grid">';
-    
-    if ( ! empty( $top ) ) {
-        echo '<div class="pscf-note-box top">';
-        echo '<div class="pscf-note-header">';
-        echo '<span class="pscf-icon">✨</span>';
-        echo '<h4>' . esc_html__( 'Top Notes', 'perfume-store-custom-features' ) . '</h4>';
-        echo '</div>';
-        echo '<p class="pscf-note-content">' . esc_html( $top ) . '</p>';
-        echo '</div>';
-    }
-    
-    if ( ! empty( $middle ) ) {
-        echo '<div class="pscf-note-box middle">';
-        echo '<div class="pscf-note-header">';
-        echo '<span class="pscf-icon">🌸</span>';
-        echo '<h4>' . esc_html__( 'Middle Notes', 'perfume-store-custom-features' ) . '</h4>';
-        echo '</div>';
-        echo '<p class="pscf-note-content">' . esc_html( $middle ) . '</p>';
-        echo '</div>';
-    }
-    
-    if ( ! empty( $base ) ) {
-        echo '<div class="pscf-note-box base">';
-        echo '<div class="pscf-note-header">';
-        echo '<span class="pscf-icon">🪵</span>';
-        echo '<h4>' . esc_html__( 'Base Notes', 'perfume-store-custom-features' ) . '</h4>';
-        echo '</div>';
-        echo '<p class="pscf-note-content">' . esc_html( $base ) . '</p>';
-        echo '</div>';
-    }
-    
-    echo '</div>'; // pscf-notes-grid
-    echo '</div>'; // pscf-scent-profile
 }
 
 /**
